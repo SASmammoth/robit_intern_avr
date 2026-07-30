@@ -86,7 +86,7 @@
 
 | 동작 모습 |
 | :---: |
-| ![LED/SW](https://drive.google.com/file/d/15c8jPi8f2ZNYFTp55i4Kv7ADZIRoqqlf/view?usp=sharing) |
+| [▶ 동작 영상 보기](https://drive.google.com/file/d/15c8jPi8f2ZNYFTp55i4Kv7ADZIRoqqlf/view?usp=sharing) |
 | 과제에서는 인터럽트에서 LED가 한번만 이동해야 함. 제출할 때 영상을 보니 왕복하게끔 코드를 짠 것을 알게됨. <br> 이미 회로를 수정한 뒤라 정정을 할 수 없음. 따라서 어쩔수 없이 과제와 약간 다르지만 조금 더 나아간 코드/영상을 첨부함. |
 
 
