@@ -1,5 +1,5 @@
 /*
- * Tesk-02.c
+ * Task-02.c
  *
  * Created: 2026-07-29 오후 3:32:59
  * Author : SASmammoth
@@ -36,7 +36,7 @@ int main(void)
 	{
 		
 		
-		SW_C = PINC ^ MS_c;
+		SW_C = PINC ^ MS_c; // 마스크와 베타적 논리 합을 이용하여 깔끔하게 스위치 입력 확인
 		SW_D = PINC ^ MS_d;
 		PORTA = 0x00;
 		if(SW_C & (1 << PINC0) && SW_C & (1 << PINC1)) // 2개 다 누를때
@@ -44,17 +44,17 @@ int main(void)
 			PORTA = 0x00;
 			_delay_ms(500);
 		}
-		else if(SW_C & (1 << PINC0))
+		else if(SW_C & (1 << PINC0)) // SW 1이 눌리면
 		{
 			PORTA = 0xF0;
 			_delay_ms(500);
 		}
-		else if(SW_C & (1 << PINC1))
+		else if(SW_C & (1 << PINC1)) // SW 2가 눌리면
 		{
 			PORTA = 0x0F;
 			_delay_ms(500);
 		}
-		else
+		else // 기본
 		{
 			PORTA = 0xFF;
 			_delay_ms(500);
@@ -65,19 +65,19 @@ int main(void)
 	}
 }
 
-ISR(INT2_vect)
+ISR(INT2_vect) // 인터럽트 3
 {
 	PORTA = 0xFF;
 	
 	char temp_ = 0x01;
-	for(char i = 0; i < 8; i++)
+	for(char i = 0; i < 8; i++) // 좌측 이동
 	{
 		PORTA = temp_ ^ 0xFF;
 		_delay_ms(100);
 		temp_ <<= 1;
 	}
 	temp_ = 0x80;
-	for(char i = 0; i < 8; i++)
+	for(char i = 0; i < 8; i++) // 반대로
 	{
 		PORTA = temp_ ^ 0xFF;
 		_delay_ms(100);
@@ -86,12 +86,12 @@ ISR(INT2_vect)
 	
 }
 
-ISR(INT3_vect)
+ISR(INT3_vect) // 인터럽트 4
 {
 	PORTA = 0xFF;
 	
 	char temp_ = 0x80;
-	for(char i = 0; i < 8; i++)
+	for(char i = 0; i < 8; i++) // 우측 이동
 	{
 		PORTA = temp_ ^ 0xFF;
 		_delay_ms(100);
@@ -99,7 +99,7 @@ ISR(INT3_vect)
 	}
 	
 	temp_ = 0x01;
-	for(char i = 0; i < 8; i++)
+	for(char i = 0; i < 8; i++) // 반대로
 	{
 		PORTA = temp_ ^ 0xFF;
 		_delay_ms(100);
