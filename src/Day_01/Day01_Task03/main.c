@@ -22,7 +22,7 @@ volatile uint8_t counter = 0; // 인터럽트와 변수를 공유하기 위함.
 int main(void)
 {
     /* Replace with your application code */
-	DDRA = 0xFF;
+	DDRA = 0xFF; // 핀 입출력 설정
 	DDRC = 0x00;
 	DDRD = 0x00;
 	
@@ -39,7 +39,7 @@ int main(void)
 	
 	while (1)
 	{
-		PORTA = ~counter;
+		PORTA = ~counter; // 이진카운터를 계속 출력
 		_delay_ms(100);
 		counter++;
 	}
@@ -66,7 +66,7 @@ ISR(INT2_vect) // S/W : 2
 
 ISR(INT3_vect) // S/W : 3
 {
-	counter = 0;
+	counter = 0; // 이진카운터 초기화
 }
 
 ISR(INT4_vect) // S/W : 0

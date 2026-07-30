@@ -37,10 +37,10 @@ int main(void)
 	EICRA = 0xA0; // 하강 엣지 클럭 사용
 	EICRB = 0x22;
 	
-	sei();
+	sei(); // 인터럽트 사용
 	
 	
-	i2c_master_init(100000);
+	i2c_master_init(100000); // i2c 통신속도 초기화
 	_delay_ms(100);
 
 	LiquidCrystalDevice_t device = lq_init(0x27, 16, 2, LCD_5x8DOTS);
@@ -49,7 +49,7 @@ int main(void)
 	lq_clear(&device);              
 
 	lq_setCursor(&device, 0, 0);    
-	lq_print(&device, "JKM");
+	lq_print(&device, "JKM"); // 이니셜 생성
 
 	lq_setCursor(&device, 1, 0);    
 	
@@ -59,10 +59,10 @@ int main(void)
 	{
 		
 		
-		sprintf(buf_, "%3d %c %3d = %3d", A_, op, B_, C_);
+		sprintf(buf_, "%3d %c %3d = %3d", A_, op, B_, C_); // 문자열 조작을 통해 형식 설정
 		
 		lq_setCursor(&device, 1, 0);
-		lq_print(&device, buf_);
+		lq_print(&device, buf_); // 출력
 		
 		_delay_ms(100);
 		
@@ -72,12 +72,12 @@ int main(void)
 
 ISR(INT2_vect) // S/W : 2
 {
-	B_++;
+	B_++; // B에 1 더함
 }
 
 ISR(INT3_vect) // S/W : 3
 {
-	switch(op){
+	switch(op){ // switch문을 이용해 연산 수행
 		case('+'):
 			C_ = A_ + B_;
 			break;
@@ -98,12 +98,12 @@ ISR(INT3_vect) // S/W : 3
 
 ISR(INT4_vect) // S/W : 0
 {
-	A_++;
+	A_++; // A에 1을 더함
 }
 
 ISR(INT6_vect) // S/W : 1
 {
-	op_i++;
+	op_i++; // 연산자 인덱스를 이용하여 + - * / 회전 실현
 	if( op_i > 3)
 		op_i = 0;
 	op = op_list[op_i];
