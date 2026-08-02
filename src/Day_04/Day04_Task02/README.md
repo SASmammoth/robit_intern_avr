@@ -33,10 +33,10 @@ TIMER을 통해 시간경과를 인식하여 달력프로그램의 날짜를 바
 
 ```text
 [ATmega128]                         [Target Component]
- PORTA (PA0 ~ PA7)       ----->      8-Bit LED
  SDA/SCL (PD0:1)		 ----->      LCD I2C통신
  PE4 (INT4)              ----->      SW0 (setting)
  PE5 (INT5)              ----->      SW1 (start)
+ ADC0 (PF0)              ----->      가변저항
 ```
 
 ### 주요 회로 특징
