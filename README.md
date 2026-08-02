@@ -22,34 +22,118 @@
 ├── README.md
 └── src
     ├── Day_01
-    │   ├── Day01_Task02
-    │   │   ├── Day01_Task02.cproj
-    │   │   └── main.c
-    │   ├── Day01_Task03
-    │   │   ├── Day01_Task03.cproj
-    │   │   └── main.c
-    │   ├── Day_01.atsln
-    │   ├── Task_02
-    │   └── Task_03
+    │   ├── Day01_Task01
+    │   │   ├── O.png
+    │   │   ├── Pull-up-and-Pull-down-Resistor.webp
+    │   │   └── README.md
+    │   ├── Day01_Task02
+    │   │   ├── Day01_Task02.atsln
+    │   │   ├── Day01_Task02.componentinfo.xml
+    │   │   ├── Day01_Task02.cproj
+    │   │   ├── README.md
+    │   │   └── main.c
+    │   ├── Day01_Task03
+    │   │   ├── Day01_Task03.componentinfo.xml
+    │   │   ├── Day01_Task03.cproj
+    │   │   ├── README.md
+    │   │   ├── circuit.jpg
+    │   │   └── main.c
+    │   └── Day_01.atsln
     ├── Day_02
-    │   ├── Day02_Task02
-    │   │   ├── Day02_Task02.cproj
-    │   │   ├── i2c_master.c
-    │   │   ├── i2c_master.h
-    │   │   ├── liquid_crystal_i2c.c
-    │   │   ├── liquid_crystal_i2c.h
-    │   │   └── main.c
-    │   ├── Day02_Task03
-    │   │   ├── Day02_Task03.cproj
-    │   │   ├── i2c_master.c
-    │   │   ├── i2c_master.h
-    │   │   ├── liquid_crystal_i2c.c
-    │   │   ├── liquid_crystal_i2c.h
-    │   │   └── main.c
-    │   ├── Day_02.atsln
-    │   ├── LCD_Text.c
-    │   └── LCD_Text.h
-    └── Day_03
+    │   ├── Day02_Task01
+    │   │   ├── 2026_DataSheet_ADC
+    │   │   ├── ADCHL.png
+    │   │   ├── ADCSRA.png
+    │   │   ├── ADMUX.png
+    │   │   ├── README.md
+    │   │   ├── double.png
+    │   │   └── single.png
+    │   ├── Day02_Task02
+    │   │   ├── Day02_Task02.componentinfo.xml
+    │   │   ├── Day02_Task02.cproj
+    │   │   ├── README.md
+    │   │   ├── circuit.jpg
+    │   │   ├── i2c_master.c
+    │   │   ├── i2c_master.h
+    │   │   ├── liquid_crystal_i2c.c
+    │   │   ├── liquid_crystal_i2c.h
+    │   │   └── main.c
+    │   ├── Day02_Task03
+    │   │   ├── Day02_Task03.componentinfo.xml
+    │   │   ├── Day02_Task03.cproj
+    │   │   ├── README.md
+    │   │   ├── circuit.jpg
+    │   │   ├── i2c_master.c
+    │   │   ├── i2c_master.h
+    │   │   ├── liquid_crystal_i2c.c
+    │   │   ├── liquid_crystal_i2c.h
+    │   │   └── main.c
+    │   ├── Day_02.atsln
+    │   ├── LCD_Text.c
+    │   └── LCD_Text.h
+    ├── Day_03
+    │   ├── Day03_Task01
+    │   │   ├── Master-slave.png
+    │   │   ├── README.md
+    │   │   └── UART_Fraim.png
+    │   ├── Day03_Task02
+    │   │   ├── Day03_Task02.cproj
+    │   │   ├── README.md
+    │   │   ├── circuit.jpg
+    │   │   └── main.c
+    │   ├── Day03_Task03
+    │   │   ├── Day03_Task03.cproj
+    │   │   ├── README.md
+    │   │   ├── circuit.jpg
+    │   │   ├── i2c_master.c
+    │   │   ├── i2c_master.h
+    │   │   ├── liquid_crystal_i2c.c
+    │   │   ├── liquid_crystal_i2c.h
+    │   │   └── main.c
+    │   ├── Day03_Task04
+    │   │   ├── Day03_Task04.cproj
+    │   │   ├── README.md
+    │   │   ├── circuit.jpg
+    │   │   └── main.c
+    │   ├── Day_03.atsln
+    │   └── task3_2026_fix.c
+    └── Day_04
+        ├── Day04_Task01
+        │   ├── README.md
+        │   ├── image-1.png
+        │   ├── image-2.png
+        │   ├── image-3.png
+        │   ├── image-4.png
+        │   ├── image-5.png
+        │   ├── image-6.png
+        │   ├── image-7.png
+        │   └── image.png
+        ├── Day04_Task02
+        │   ├── Day04_Task02.cproj
+        │   ├── README.md
+        │   ├── circuit.jpg
+        │   ├── i2c_master.c
+        │   ├── i2c_master.h
+        │   ├── liquid_crystal_i2c.c
+        │   ├── liquid_crystal_i2c.h
+        │   └── main.c
+        ├── Day04_Task03
+        │   ├── Day04_Task03.cproj
+        │   ├── README.md
+        │   ├── circuit.jpg
+        │   └── main.c
+        ├── Day04_Task04
+        │   ├── Day04_Task04.cproj
+        │   ├── README.md
+        │   ├── image.png
+        │   └── main.c
+        ├── Day04_Task05
+        │   ├── Day04_Task05.cproj
+        │   ├── README.md
+        │   ├── circuit.jpg
+        │   └── main.c
+        └── Day_04.atsln
+
 
 
 ```
